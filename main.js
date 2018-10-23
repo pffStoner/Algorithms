@@ -50,4 +50,22 @@ function isPalindrome(string) {
     else return false;
 }
 
-console.log(isPalindrome('Madam Im Ad`amdd'));
+// console.log(isPalindrome('Madam Im Ad`am'));
+
+function reverseWords(string){
+    let wordsArr = string.split(' ');
+    let reverseWordsArr = [];
+
+    wordsArr.forEach(word =>{
+        let reverseWord = '';
+        for(var i = word.length - 1; i >= 0; i--){
+            reverseWord +=word[i];
+         //   console.log(reverseWord);
+        }
+        reverseWordsArr.push(reverseWord);
+    });
+    return reverseWordsArr.join(' ');
+}
+
+console.log(reverseWords('Mitko dali stana h? ? j'));
+
